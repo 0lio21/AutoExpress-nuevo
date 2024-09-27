@@ -1,0 +1,27 @@
+{
+    "status": 0,
+    "results": {
+      "identificacion": 0,
+      "denominacion": "string",
+      "periodos": [
+        {
+          "periodo": "string",
+          "entidades": [
+            {
+              "entidad": "string",
+              "situacion": 0,
+              "fechaSit1": "2024-09-17",
+              "monto": 0,
+              "diasAtrasoPago": 0,
+              "refinanciaciones": true,
+              "recategorizacionOblig": true,
+              "situacionJuridica": true,
+              "irrecDisposicionTecnica": true,
+              "enRevision": true,
+              "procesoJud": true
+            }
+          ]
+        }
+      ]
+    }
+  }

@@ -1,0 +1,71 @@
+.car-slider {
+  width: 100%; /* O establece un ancho fijo */
+  max-width: 1400px; /* Aumenta el tamaño máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  padding: 20px; /* Añade un poco de espacio alrededor del contenedor */
+  position: relative; /* Para los botones de desplazamiento */
+}
+
+.car-list {
+  display: flex;
+  transition: transform 0.5s ease; /* Suaviza el desplazamiento */
+  justify-content: center; /* Centra los autos dentro de la lista */
+  flex-wrap: nowrap; /* Evita que los elementos se ajusten a la siguiente línea */
+}
+
+.car-card {
+  border: 1px solid #ccc;
+  padding: 30px; /* Aumenta el padding para un diseño más espacioso */
+  width: 300px; /* Ancho fijo para cada tarjeta */
+  text-align: center;
+  flex-shrink: 0; /* Evita que los elementos se encojan */
+  margin: 0 10px; /* Espaciado entre tarjetas */
+}
+
+.scroll-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px; /* Aumenta el padding para los botones */
+  font-size: 1.2em; /* Aumenta el tamaño de la fuente */
+  cursor: pointer;
+  z-index: 1; /* Asegura que el botón esté en la parte superior */
+}
+
+.scroll-button.left {
+  position: absolute;
+  left: 20px; /* Ajusta según sea necesario */
+}
+
+.scroll-button.right {
+  position: absolute;
+  right: 20px; /* Ajusta según sea necesario */
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+  .car-card {
+      width: 250px; /* Reduce el ancho de la tarjeta */
+  }
+}
+
+@media (max-width: 768px) {
+  .car-card {
+      width: 200px; /* Reduce aún más el ancho en pantallas más pequeñas */
+  }
+
+  .scroll-button {
+      padding: 10px; /* Reduce el padding del botón */
+      font-size: 1em; /* Ajusta el tamaño de la fuente del botón */
+  }
+}
+
+@media (max-width: 480px) {
+  .car-card {
+      width: 150px; /* Ancho más pequeño para pantallas muy pequeñas */
+  }
+
+  .car-slider {
+      padding: 10px; /* Reduce el padding del contenedor */
+  }
+}

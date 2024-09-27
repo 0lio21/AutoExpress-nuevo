@@ -1,6 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Para redirigir al hacer clic en los logos
-import '../estilos/CarBrands.css'; // Asegúrate de crear este archivo CSS
+import { useNavigate } from 'react-router-dom';
+import '../estilos/CarBrands.css';
+import CarList from './CarList';
 
 // Importa los logos de manera explícita
 import chevroletLogo from '../assets/images/chevrolet_logo.png';
@@ -11,7 +12,6 @@ import toyotaLogo from '../assets/images/toyota_logo.png';
 import fordLogo from '../assets/images/ford_logo.png';
 import hondaLogo from '../assets/images/honda_logo.png';
 import volkswagenLogo from '../assets/images/volkswagen_logo.png';
-// Agrega más logos de marcas aquí
 
 const CarBrands = () => {
     const navigate = useNavigate();
@@ -19,7 +19,7 @@ const CarBrands = () => {
     // Función para manejar el clic en un logo
     const handleBrandClick = (brand) => {
         // Redirige a la página con los autos filtrados por marca
-        navigate(`/autos/${brand.toLowerCase()}`);
+        navigate(`/autos/${brand.toLowerCase()}`); // Asegúrate de usar comillas invertidas para la plantilla
     };
 
     // Lista de marcas con su logo y nombre
@@ -32,11 +32,10 @@ const CarBrands = () => {
         { name: 'Ford', logo: fordLogo },
         { name: 'Honda', logo: hondaLogo },
         { name: 'Volkswagen', logo: volkswagenLogo },
-        // Agrega más marcas aquí
     ];
 
     return (
-        <div className="brand-slider">
+        <div className="brand-slider-section">
             <div className="brand-container">
                 {brands.map(brand => (
                     <div className="brand-card" key={brand.name} onClick={() => handleBrandClick(brand.name)}>
@@ -46,7 +45,10 @@ const CarBrands = () => {
                 ))}
             </div>
         </div>
+        
+        
     );
+    
 };
 
 export default CarBrands;

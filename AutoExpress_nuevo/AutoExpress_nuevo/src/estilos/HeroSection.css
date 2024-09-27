@@ -4,7 +4,7 @@
     align-items: center;
     background-color: #0066cc;
     padding: 40px;
-    color: #fff;
+    color: #ffffff;
     border-radius: 8px;
     margin-bottom: 40px;
   }
@@ -33,7 +33,7 @@
   }
   
   .cta-button {
-    background-color: #fff;
+    background-color: #ffffff;
     color: #0066cc;
     border: none;
     padding: 15px 30px;

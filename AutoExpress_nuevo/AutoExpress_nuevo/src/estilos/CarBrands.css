@@ -1,0 +1,83 @@
+.brand-slider {
+    width: 100%;
+    overflow-x: auto; /* Permite el scroll solo si es necesario */
+    display: flex;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    justify-content: flex-start; /* Alineación al inicio */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+    -ms-overflow-style: none;  /* Oculta la barra de desplazamiento en IE y Edge */
+    touch-action: pan-x;
+}
+
+.brand-slider::-webkit-scrollbar {
+    display: none;  /* Oculta la barra de desplazamiento en Chrome, Safari y Opera */
+}
+
+.brand-container {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; /* Alineación al inicio */
+    align-items: center;
+}
+
+/* Estilos para las tarjetas de marca */
+.brand-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;  /* Tamaño fijo */
+    height: 200px; /* Mantén un alto fijo si es necesario */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-sizing: border-box; /* Para evitar que el padding afecte el tamaño */
+}
+
+.brand-card img {
+    width: 100px;  /* Mantén el tamaño fijo */
+    height: 100px; /* Asegura que las imágenes sean cuadradas */
+    object-fit: cover;  /* Asegura que la imagen mantenga su proporción */
+}
+
+.brand-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.brand-card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .brand-card {
+        width: 120px; /* Ajusta el tamaño de las tarjetas en pantallas medianas */
+        height: 180px;
+    }
+    .brand-card img {
+        width: 90px; /* Ajusta el tamaño de las imágenes para pantallas medianas */
+        height: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .brand-slider {
+        flex-wrap: wrap; /* Permite que las tarjetas se ajusten a nuevas filas */
+        justify-content: center; /* Centra las tarjetas en la fila */
+    }
+    
+    .brand-card {
+        width: calc(50% - 10px); /* Dos tarjetas por fila, menos el espacio */
+        height: 150px; /* Ajusta la altura si es necesario */
+        margin-bottom: 20px; /* Espacio entre filas */
+    }
+    .brand-card img {
+        width: 80px; /* Ajusta el tamaño de las imágenes para pantallas pequeñas */
+        height: 80px;
+    }
+}

@@ -7,20 +7,29 @@ h1 {
     color: #333;
 }
 
+/* Contenedor principal para centrar verticalmente */
+.brand-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    padding: 20px; /* Espaciado adicional */
+}
+
 /* Estilo para los logos de las marcas */
 .brand-container {
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
+    gap: 20px; /* Espacio entre los logos */
+    justify-content: center; /* Centra los logos horizontalmente */
+    align-items: center; /* Centra los logos verticalmente */
+    flex-wrap: wrap; /* Permite que los logos se ajusten en varias filas */
 }
 
 .brand-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centra el contenido dentro de la tarjeta */
     justify-content: center;
     width: 120px;
     padding: 10px;
@@ -37,32 +46,34 @@ h1 {
 }
 
 .brand-card img {
-    width: 80px;
-    height: auto;
+    width: 80px; /* Ajusta según el tamaño que necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
 .brand-card p {
     margin-top: 10px;
     font-size: 1rem;
     color: #555;
-    text-align: center;
+    text-align: center; /* Centra el texto debajo del logo */
 }
+
+/* Estilo para la sección de vehículos y otros elementos se mantienen igual */
+/* ... */
+
 
 /* Sección de Lista de Vehículos */
 .car-slider {
     display: flex;
-    overflow-x: auto;
     padding: 20px;
     gap: 20px;
-    scroll-behavior: smooth;
+    justify-content: center; /* Centra la lista de autos */
 }
 
 .car-list {
     display: flex;
-    gap: 20px;
-    justify-content: flex-start;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    justify-content: center; /* Centra los autos dentro de la lista */
     width: 100%;
-    overflow-x: scroll;
 }
 
 .car-card {
@@ -73,6 +84,7 @@ h1 {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+    margin: 10px; /* Añade espacio entre tarjetas */
 }
 
 .car-card img {
@@ -111,14 +123,6 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-}
-
-.scroll-button.left {
-    left: 0;
-}
-
-.scroll-button.right {
-    right: 0;
 }
 
 /* Estilos para el footer */
@@ -183,7 +187,22 @@ h1 {
 @media (max-width: 768px) {
     .brand-container,
     .footer-content {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .car-card {
+        width: 90%; /* Ancho adaptativo en pantallas pequeñas */
+        max-width: 250px; /* Ancho máximo para tarjetas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Tamaño de fuente del encabezado reducido */
+    }
+
+    .footer-section h3 {
+        font-size: 1.2rem; /* Tamaño de fuente reducido para el footer */
     }
 }

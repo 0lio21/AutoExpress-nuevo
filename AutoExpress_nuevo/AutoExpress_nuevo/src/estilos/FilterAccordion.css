@@ -1,0 +1,88 @@
+.accordion-container {
+  max-width: 600px; /* Máximo ancho del contenedor */
+  margin: 20px auto; /* Centra el contenedor */
+  font-family: Arial, sans-serif;
+}
+
+.accordion-container h2 {
+  font-size: 24px; /* Tamaño de fuente para el encabezado */
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Acordeón */
+.accordion-item {
+  border-bottom: 1px solid #ddd; /* Línea separadora */
+  padding: 15px 0; /* Espaciado vertical */
+}
+
+.accordion-title {
+  display: flex; /* Uso de flexbox para el título */
+  justify-content: space-between; /* Espacio entre título y flecha */
+  font-size: 18px; /* Tamaño de fuente del título */
+  font-weight: bold; /* Negrita */
+  cursor: pointer; /* Indica que es clickeable */
+}
+
+.accordion-arrow {
+  font-size: 20px; /* Tamaño de la flecha */
+  transition: transform 0.3s ease; /* Suaviza la rotación */
+}
+
+.accordion-arrow.open {
+  transform: rotate(180deg); /* Flecha hacia arriba cuando abierto */
+}
+
+.accordion-content {
+  padding: 15px 0; /* Espaciado vertical del contenido */
+  color: #555; /* Color del texto */
+  font-size: 16px; /* Tamaño de fuente del contenido */
+}
+
+/* Espaciado entre elementos del acordeón */
+.accordion-item + .accordion-item {
+  margin-top: 15px; /* Espaciado superior entre elementos */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .accordion-container {
+      max-width: 100%; /* Ancho completo en pantallas pequeñas */
+      padding: 0 10px; /* Espaciado lateral */
+  }
+
+  .accordion-container h2 {
+      font-size: 20px; /* Tamaño de fuente reducido */
+  }
+
+  .accordion-title {
+      font-size: 16px; /* Tamaño de fuente reducido */
+  }
+
+  .accordion-arrow {
+      font-size: 18px; /* Tamaño de la flecha reducido */
+  }
+
+  .accordion-content {
+      font-size: 14px; /* Tamaño de fuente del contenido reducido */
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion-container h2 {
+      font-size: 18px; /* Tamaño de fuente aún más reducido */
+  }
+
+  .accordion-title {
+      font-size: 14px; /* Tamaño de fuente del título aún más reducido */
+  }
+
+  .accordion-arrow {
+      font-size: 16px; /* Tamaño de la flecha aún más reducido */
+  }
+
+  .accordion-content {
+      font-size: 12px; /* Tamaño de fuente del contenido más pequeño */
+  }
+}

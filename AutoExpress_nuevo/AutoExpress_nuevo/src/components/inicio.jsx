@@ -4,6 +4,7 @@ import NewsCarousel from './NewsCarousel';
 import FilterAccordion from './FilterAccordion';
 import HeroSection from './HeroSection';
 import CarBrands from './CarBrands';
+import HamburgerMenu from './HamburgerMenu';
 import '../estilos/inicio.css'
 
 const Inicio = () => {
@@ -16,7 +17,7 @@ const Inicio = () => {
     return (
         <div className="App">
             <main>
-            <h1>Marcas</h1>
+            <HamburgerMenu onFilter={handleFilter} />
         {/* Mostrar las marcas */}
         <CarBrands />
                 {/* Barra de búsqueda */}

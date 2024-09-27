@@ -1,0 +1,80 @@
+.car-list-container {
+    display: flex;
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    padding: 20px;
+    gap: 20px; /* Espacio entre el filtro y la lista de autos */
+}
+
+@media (min-width: 768px) { /* Para pantallas medianas y más grandes */
+    .car-list-container {
+        flex-direction: row; /* Cambia a fila en pantallas más grandes */
+    }
+}
+
+.filters {
+    width: 100%; /* Ocupa el 100% en pantallas pequeñas */
+    max-width: 250px; /* Ancho máximo en pantallas grandes */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.car-list {
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.cars {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias líneas */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.car-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 100%; /* Ocupa el 100% en pantallas pequeñas */
+    max-width: 250px; /* Ancho máximo de la tarjeta */
+    text-align: center;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.2s; /* Suaviza la transformación */
+}
+
+@media (min-width: 768px) { /* Para pantallas medianas y más grandes */
+    .car-card {
+        width: 250px; /* Ancho fijo en pantallas más grandes */
+    }
+}
+
+.car-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.car-card img {
+    width: 100%; /* Asegúrate de que la imagen llene la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 4px; /* Bordes redondeados para la imagen */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Ajusta el padding */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Suaviza el cambio de color */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color al pasar el mouse */
+}
+
+/* Añade un margen en pantallas pequeñas para el botón */
+@media (max-width: 767px) {
+    button {
+        width: 100%; /* Botón ocupa todo el ancho en pantallas pequeñas */
+        margin-top: 10px; /* Espacio superior para el botón */
+    }
+}

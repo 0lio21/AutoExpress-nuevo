@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'; // Para obtener la marca de la URL
 import data from '../data/carsData.json';
 import '../estilos/CarList.css';
@@ -11,6 +11,25 @@ const CarList = () => {
     const filteredCars = data.filter(car => {
         return brand ? car.make.toLowerCase() === brand.toLowerCase() : true;
     });
+
+    // Estado para el índice del primer vehículo visible
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const carsToShow = 4; // Número de vehículos a mostrar
+
+    const totalCars = filteredCars.length;
+
+    // Función para avanzar al siguiente conjunto de vehículos
+    const nextSlide = () => {
+        setCurrentIndex(prevIndex => (prevIndex + 1) % Math.ceil(totalCars / carsToShow));
+    };
+
+    useEffect(() => {
+        const interval = setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+        return () => clearInterval(interval);
+    }, [totalCars]);
+
+    // Calcular los vehículos que se mostrarán en la vista
+    const displayedCars = filteredCars.slice(currentIndex * carsToShow, (currentIndex + 1) * carsToShow);
 
     const scrollLeft = () => {
         scrollContainerRef.current.scrollBy({
@@ -30,8 +49,8 @@ const CarList = () => {
         <div className="car-slider">
             <button className="scroll-button left" onClick={scrollLeft}>{"<"}</button>
             <div className="car-list" ref={scrollContainerRef}>
-                {filteredCars.length > 0 ? (
-                    filteredCars.map(car => (
+                {displayedCars.length > 0 ? (
+                    displayedCars.map(car => (
                         <div className="car-card" key={car.id}>
                             <img src={car.image} alt={`${car.make} ${car.model}`} />
                             <h2>{car.make} {car.model}</h2>

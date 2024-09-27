@@ -1,0 +1,50 @@
+/* HamburgerMenu.css */
+.hamburger-menu {
+    position: relative;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.hamburger-icon .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.menu-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000; /* Asegúrate de que esté en la parte superior */
+}
+
+.menu-content h2 {
+    color: white;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 5px;
+}
