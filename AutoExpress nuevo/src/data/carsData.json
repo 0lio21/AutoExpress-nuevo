@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2022,
+        "price": 25000,
+        "image": "https://example.com/toyota-camry.jpg",
+        "sucursal": "Buenos Aires",
+        "tipo": "Sedán",
+        "transmission": "Automático",
+        "fuel": "Gasolina",
+        "detalles": "El Toyota Camry 2022 es un sedán de tamaño medio con un diseño elegante, motor eficiente y características avanzadas de seguridad, ideal para la ciudad y viajes largos."
+    },
+    {
+        "id": 2,
+        "make": "Honda",
+        "model": "Civic",
+        "year": 2021,
+        "price": 22000,
+        "image": "https://imgs.search.brave.com/HpmWJDfyhre3EK2xznz8HndeyVGvAyWJFeV7fF7bsnA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdj/ZG4ub3RvLmNvbS5z/Zy9sYXJnZS9nYWxs/ZXJ5L2NvbG9yLzIv/MjQvaG9uZGEtY2l2/aWMtY29sb3ItMjMw/MjM1LmpwZw.webp",
+        "sucursal": "Córdoba",
+        "tipo": "Hatchback",
+        "transmission": "Manual",
+        "fuel": "Diesel",
+        "detalles": "El Honda Civic 2021 Hatchback ofrece un manejo deportivo, gran eficiencia de combustible y un diseño moderno, perfecto para quienes buscan estilo y rendimiento en un solo paquete."
+    },
+    {
+        "id": 3,
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2022,
+        "price": 25000,
+        "image": "https://example.com/toyota-camry.jpg",
+        "sucursal": "Rosario",
+        "tipo": "Sedán",
+        "transmission": "Automático",
+        "fuel": "Gasolina",
+        "detalles": "El Toyota Camry 2022 cuenta con un diseño aerodinámico, tecnología avanzada y un motor de gasolina que ofrece un excelente rendimiento tanto en ciudad como en carretera."
+    },
+    {
+        "id": 4,
+        "make": "Honda",
+        "model": "Civic",
+        "year": 2021,
+        "price": 22000,
+        "image": "2_honda_civic.webp",
+        "sucursal": "Mendoza",
+        "tipo": "Hatchback",
+        "transmission": "Manual",
+        "fuel": "Diesel",
+        "detalles": "El Honda Civic 2021 es un hatchback versátil con gran capacidad de carga, eficiente en combustible y un interior espacioso, ideal para viajes largos y aventuras urbanas."
+    },
+    {
+        "id": 5,
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2022,
+        "price": 25000,
+        "image": "https://example.com/toyota-camry.jpg",
+        "sucursal": "Buenos Aires",
+        "tipo": "Sedán",
+        "transmission": "Automático",
+        "fuel": "Gasolina",
+        "detalles": "El Toyota Camry 2022 ofrece un confort excepcional, tecnología de vanguardia y un excelente consumo de combustible, convirtiéndolo en uno de los sedanes más vendidos en el mercado."
+    },
+    {
+        "id": 6,
+        "make": "Honda",
+        "model": "Civic",
+        "year": 2021,
+        "price": 22000,
+        "image": "2_honda_civic.webp",
+        "sucursal": "Córdoba",
+        "tipo": "Hatchback",
+        "transmission": "Manual",
+        "fuel": "Diesel",
+        "detalles": "El Honda Civic 2021 combina un diseño moderno con características de seguridad de última generación, brindando una experiencia de conducción segura y emocionante."
+    },
+    {
+        "id": 7,
+        "make": "chevrolet",
+        "model": "Camry",
+        "year": 2022,
+        "price": 25000,
+        "image": "https://example.com/toyota-camry.jpg",
+        "sucursal": "Buenos Aires",
+        "tipo": "Sedán",
+        "transmission": "Automático",
+        "fuel": "Gasolina",
+        "detalles": "El Toyota Camry 2022 ofrece un confort excepcional, tecnología de vanguardia y un excelente consumo de combustible, convirtiéndolo en uno de los sedanes más vendidos en el mercado."
+    }
+]
