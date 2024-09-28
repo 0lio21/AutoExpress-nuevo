@@ -1,208 +1,54 @@
-/* Estilos para la sección de Marcas */
-h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-    color: #333;
-}
-
-/* Contenedor principal para centrar verticalmente */
-.brand-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra verticalmente el contenido */
-    align-items: center; /* Centra horizontalmente el contenido */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    padding: 20px; /* Espaciado adicional */
-}
-
-/* Estilo para los logos de las marcas */
-.brand-container {
-    display: flex;
-    gap: 20px; /* Espacio entre los logos */
-    justify-content: center; /* Centra los logos horizontalmente */
-    align-items: center; /* Centra los logos verticalmente */
-    flex-wrap: wrap; /* Permite que los logos se ajusten en varias filas */
-}
-
-.brand-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido dentro de la tarjeta */
-    justify-content: center;
+/* Estilos para el carousel y lista de autos */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .brand-card img {
+    width: 80px;
+    height: auto;
+  }
+  
+  .brand-card {
     width: 120px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 10px;
+    background-color: #fff;
     cursor: pointer;
-    transition: transform 0.2s;
-    background-color: #fff;
-}
-
-.brand-card:hover {
+  }
+  
+  .brand-card:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.brand-card img {
-    width: 80px; /* Ajusta según el tamaño que necesites */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
-
-.brand-card p {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #555;
-    text-align: center; /* Centra el texto debajo del logo */
-}
-
-/* Estilo para la sección de vehículos y otros elementos se mantienen igual */
-/* ... */
-
-
-/* Sección de Lista de Vehículos */
-.car-slider {
-    display: flex;
-    padding: 20px;
-    gap: 20px;
-    justify-content: center; /* Centra la lista de autos */
-}
-
-.car-list {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
-    justify-content: center; /* Centra los autos dentro de la lista */
-    width: 100%;
-}
-
-.car-card {
-    width: 250px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    margin: 10px; /* Añade espacio entre tarjetas */
-}
-
-.car-card img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .car-card img {
     width: 100%;
     height: auto;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-.car-card h2 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.car-card p {
-    font-size: 0.9rem;
-    color: #555;
-    margin: 5px 0;
-}
-
-.car-card:hover {
+  }
+  
+  .car-card {
+    margin: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .car-card:hover {
     transform: scale(1.05);
-}
-
-.scroll-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-/* Estilos para el footer */
-.footer-container {
+  }
+  
+  .footer-container {
     background-color: #333;
     color: #fff;
     padding: 30px 0;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.footer-section {
-    flex: 1;
-    margin: 0 20px;
-}
-
-.footer-section h3 {
+  }
+  
+  .footer-section h3 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #fff;
-}
-
-.footer-section p,
-.footer-section a {
-    font-size: 1rem;
+  }
+  
+  .footer-section p,
+  .footer-section a {
     color: #ddd;
-    margin-bottom: 10px;
-}
-
-.footer-section a:hover {
-    color: #fff;
-}
-
-.social-links {
-    list-style-type: none;
-    padding: 0;
-}
-
-.social-links li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.social-links a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    color: #ddd;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .brand-container,
-    .footer-content {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos */
-    }
-
-    .car-card {
-        width: 90%; /* Ancho adaptativo en pantallas pequeñas */
-        max-width: 250px; /* Ancho máximo para tarjetas */
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem; /* Tamaño de fuente del encabezado reducido */
-    }
-
-    .footer-section h3 {
-        font-size: 1.2rem; /* Tamaño de fuente reducido para el footer */
-    }
-}
+  }
+  

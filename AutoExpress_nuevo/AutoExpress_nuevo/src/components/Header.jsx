@@ -1,56 +1,58 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Importa useNavigate
-import '../estilos/Header.css'; // Ruta ajustada al archivo CSS
+import { Link, useNavigate } from 'react-router-dom'; 
+import '../estilos/Header.css'; 
 
 const Header = () => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar la visibilidad del menú
-    const navigate = useNavigate(); // Inicializa el hook de navegación
+    const [isMenuOpen, setIsMenuOpen] = useState(false); 
+    const navigate = useNavigate(); 
 
     const handleSearch = (event) => {
         event.preventDefault();
         console.log('Buscando:', searchTerm);
         // Aquí puedes agregar lógica para redirigir a una página de resultados
+        // Por ejemplo: navigate(`/busqueda?q=${searchTerm}`);
     }
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen); // Alternar la visibilidad del menú
+        setIsMenuOpen(!isMenuOpen); 
     }
 
     const handleQuoteClick = () => {
-        navigate('/cotiza'); // Redirige a la página de cotización
+        navigate('/cotiza'); 
     }
+
+    // Cerrar el menú al hacer clic fuera de él
+    const handleClickOutside = (event) => {
+        if (isMenuOpen && !event.target.closest('.navbar')) {
+            setIsMenuOpen(false);
+        }
+    }
+
+    React.useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isMenuOpen]);
 
     return (
         <header className="header-container">
             <nav className="navbar">
                 <div className="logo">
-                    <h1>Concesionario</h1>
+                    <h1>AutoExpress</h1>
                 </div>
-                {/* Botón de hamburguesa */}
-                <div className="hamburger-icon" onClick={toggleMenu}>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                </div>
-                {/* Menú de navegación */}
-                <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+                
+               
+                <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`} aria-hidden={!isMenuOpen}>
                     <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/autos">Autos</Link></li>
                     <li><Link to="/ofertas">Ofertas Especiales</Link></li>
                     <li><Link to="/financiamiento">Financiamiento</Link></li>
                 </ul>
-                <form onSubmit={handleSearch} className="search-form">
-                    <input 
-                        type="text" 
-                        placeholder="Buscar..." 
-                        value={searchTerm} 
-                        onChange={(e) => setSearchTerm(e.target.value)} 
-                    />
-                    <button type="submit">Buscar</button>
-                </form>
+                
                 <div className="nav-actions">
-                    <button className="btn-quote" onClick={handleQuoteClick}>💬 Cotiza tu auto</button> {/* Llama a la función al hacer clic */}
+                    <button className="btn-quote" onClick={handleQuoteClick}>💬 Cotiza tu auto</button>
                     <button className="btn-login">Iniciar Sesión</button>
                 </div>
             </nav>

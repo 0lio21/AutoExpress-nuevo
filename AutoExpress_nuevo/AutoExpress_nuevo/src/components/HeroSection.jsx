@@ -1,8 +1,15 @@
 import React from 'react';
-import '../estilos/HeroSection.css'; // Crea este archivo para los estilos
-import carImage from '../images/car-vehicles-transport-in-flat-style-png.webp'; // Asegúrate de que la imagen esté en la carpeta de imágenes
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import '../estilos/HeroSection.css';
+import carImage from '../images/car-vehicles-transport-in-flat-style-png.webp';
 
 const HeroSection = () => {
+    const navigate = useNavigate(); // Hook para la navegación
+
+    const handleClick = () => {
+        navigate('/cotiza'); // Redirige a la página Cotiza.jsx
+    };
+
     return (
         <div className="hero-section">
             <div className="hero-content">
@@ -12,7 +19,9 @@ const HeroSection = () => {
                 <p>Vendé tu auto sin intermediarios. Te depositamos directo en tu cuenta.</p>
                 <hr />
                 <p>Dejalo en parte de pago y llevate un auto certificado y con garantía.</p>
-                <button className="cta-button">Vendé tu auto</button>
+                <button className="cta-button" onClick={handleClick}>
+                    Vendé tu auto
+                </button>
             </div>
             <div className="hero-image">
                 <img src={carImage} alt="Coche" />
@@ -22,3 +31,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

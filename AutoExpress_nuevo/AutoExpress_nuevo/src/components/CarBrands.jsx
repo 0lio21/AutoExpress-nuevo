@@ -35,7 +35,7 @@ const CarBrands = () => {
     ];
 
     return (
-        <div className="brand-slider-section">
+        <div className="brand-slider-section-center">
             <div className="brand-container">
                 {brands.map(brand => (
                     <div className="brand-card" key={brand.name} onClick={() => handleBrandClick(brand.name)}>

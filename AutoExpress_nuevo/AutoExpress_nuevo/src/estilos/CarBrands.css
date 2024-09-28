@@ -1,47 +1,28 @@
-.brand-slider {
-    width: 100%;
-    overflow-x: auto; /* Permite el scroll solo si es necesario */
+.brand-slider-section-center {
     display: flex;
-    padding: 20px 0;
-    scroll-behavior: smooth;
-    justify-content: flex-start; /* Alineación al inicio */
-    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
-    -ms-overflow-style: none;  /* Oculta la barra de desplazamiento en IE y Edge */
-    touch-action: pan-x;
-}
-
-.brand-slider::-webkit-scrollbar {
-    display: none;  /* Oculta la barra de desplazamiento en Chrome, Safari y Opera */
+    justify-content: center; /* Centra horizontalmente el contenedor */
+    align-items: center; /* Centra verticalmente el contenedor, si es necesario */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    padding: 20px; /* Agrega espacio alrededor, si lo deseas */
 }
 
 .brand-container {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-start; /* Alineación al inicio */
-    align-items: center;
+    display: flex; /* Utiliza flexbox para alinear las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples líneas si es necesario */
+    justify-content: center; /* Centra las tarjetas dentro del contenedor */
 }
 
-/* Estilos para las tarjetas de marca */
 .brand-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 150px;  /* Tamaño fijo */
-    height: 200px; /* Mantén un alto fijo si es necesario */
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s;
-    box-sizing: border-box; /* Para evitar que el padding afecte el tamaño */
+    margin: 10px; /* Espaciado entre las tarjetas */
+    text-align: center; /* Centra el texto dentro de cada tarjeta */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
 }
 
 .brand-card img {
-    width: 100px;  /* Mantén el tamaño fijo */
-    height: 100px; /* Asegura que las imágenes sean cuadradas */
-    object-fit: cover;  /* Asegura que la imagen mantenga su proporción */
+    max-width: 100%; /* Asegura que las imágenes no excedan el tamaño de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
+
 
 .brand-card p {
     margin-top: 10px;

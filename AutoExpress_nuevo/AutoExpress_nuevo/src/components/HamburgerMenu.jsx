@@ -1,9 +1,11 @@
-// HamburgerMenu.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Asegúrate de importar useNavigate
 import '../estilos/HamburgerMenu.css'; // Asegúrate de que esta ruta sea correcta
 
 const HamburgerMenu = ({ onFilter }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [filters, setFilters] = useState({ brand: '', year: '', sort: '', fuel: '' }); // Estado para los filtros
+    const navigate = useNavigate(); // Inicializa useNavigate
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -11,12 +13,24 @@ const HamburgerMenu = ({ onFilter }) => {
 
     const handleFilterChange = (event) => {
         const { name, value } = event.target;
-        onFilter({ [name]: value });
+        setFilters((prevFilters) => ({ ...prevFilters, [name]: value })); // Actualiza el estado de filtros
+    };
+
+    const handleSearch = () => {
+        onFilter(filters); // Llama a la función de filtro con los filtros seleccionados
+        navigate('/autos', { state: { filters } }); // Redirige a la página de autos, pasando los filtros
     };
 
     return (
         <div className={`hamburger-menu ${isOpen ? 'open' : ''}`}>
-            <div className="hamburger-icon" onClick={toggleMenu}>
+            <div
+                className="hamburger-icon"
+                onClick={toggleMenu}
+                role="button"
+                aria-expanded={isOpen}
+                tabIndex={0}
+                onKeyPress={(e) => e.key === 'Enter' && toggleMenu()}
+            >
                 <div className="line"></div>
                 <div className="line"></div>
                 <div className="line"></div>
@@ -61,6 +75,7 @@ const HamburgerMenu = ({ onFilter }) => {
                             <option value="electric">Eléctrico</option>
                         </select>
                     </div>
+                    <button className="btn-search" onClick={handleSearch}>Buscar</button> {/* Botón de búsqueda */}
                 </div>
             )}
         </div>

@@ -1,50 +1,88 @@
-/* HamburgerMenu.css */
-.hamburger-menu {
-    position: relative;
-}
+/* Financiamiento.css */
 
-.hamburger-icon {
+/* Estilos generales para el componente de financiamiento */
+.financiamiento {
+    margin-top: 50px;
+  }
+  
+  /* Estilos para el footer */
+  footer {
+    background-color: #343a40; /* Color oscuro de fondo */
+    color: #f8f9fa; /* Texto claro */
+    padding: 40px 0; /* Espaciado vertical */
+  }
+  
+  footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+  
+  footer .fa-2x {
+    color: #f8f9fa; /* Color de los íconos */
+  }
+  
+  footer .fa-2x:hover {
+    color: #ffc107; /* Color al pasar el mouse */
+    transition: color 0.3s ease;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  
+  footer .text-center {
     display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    margin: 10px;
-}
-
-.hamburger-icon .line {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-.menu-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    padding: 20px;
-    width: 250px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000; /* Asegúrate de que esté en la parte superior */
-}
-
-.menu-content h2 {
-    color: white;
-}
-
-.filter-group {
-    margin-bottom: 15px;
-}
-
-.filter-group label {
-    display: block;
-    color: white;
-    margin-bottom: 5px;
-}
-
-.filter-group select {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Estilo para los contenedores del footer */
+  footer .row {
+    justify-content: center;
+  }
+  
+  footer .col-md-4 {
+    padding: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    footer .col-md-4 {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    footer h5 {
+      font-size: 1rem;
+    }
+  
+    footer .fa-2x {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Estilos para los botones */
+  button.btn-primary, button.btn-success {
     width: 100%;
-    padding: 5px;
-}
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  /* Estilo adicional para inputs y selectores */
+  .form-group input,
+  .form-group select {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .alert {
+    border-radius: 8px;
+  }
+  
+  

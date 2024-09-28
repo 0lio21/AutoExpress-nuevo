@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../estilos/Cotiza.css'; // Asegúrate de que la ruta sea correcta
+import '../estilos/Cotiza.css';
 
 const Cotiza = () => {
     const [formData, setFormData] = useState({
@@ -32,11 +32,11 @@ const Cotiza = () => {
     const handleFileChange = (event) => {
         const { name, files } = event.target;
 
-        // Manejar múltiples archivos para fotos interiores
+        // Para manejar múltiples archivos para las fotos interiores
         if (name === 'interiorPhotos') {
-            setFormData({ ...formData, interiorPhotos: files });
+            setFormData({ ...formData, interiorPhotos: Array.from(files) });
         } else {
-            setFormData({ ...formData, [name]: files[0] }); // Solo permite un archivo por campo
+            setFormData({ ...formData, [name]: files[0] });
         }
     };
 
@@ -51,6 +51,7 @@ const Cotiza = () => {
 
         // Aquí puedes agregar la lógica para enviar los datos, como una API o un servicio
         console.log('Datos enviados:', formData);
+
         // Resetea el formulario si es necesario
         setFormData({
             name: '',
@@ -271,7 +272,7 @@ const Cotiza = () => {
                         name="interiorPhotos"
                         onChange={handleFileChange}
                         accept="image/*"
-                        multiple // Permitir subir múltiples archivos
+                        multiple
                         required
                     />
                 </label>
