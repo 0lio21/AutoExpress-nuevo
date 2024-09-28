@@ -322,7 +322,7 @@ const Financiamiento = () => {
             <div className="col-md-4">
               <h5>Información Adicional</h5>
               <p className="mb-1">Cuotas desde 3 hasta 60 meses</p>
-              <p>Ofrecemos planes sin interés</p>
+              <p>Ofrecemos planes sin interésss</p>
             </div>
           </div>
         </div>
